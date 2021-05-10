@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private val noticias:News = (
-            News("hola","como", "Estas")
+            News("salta","peo", "Estas")
             )
 
 

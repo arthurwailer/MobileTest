@@ -1,9 +1,11 @@
 package com.example.mobiledeveloptest.model
 
+import com.google.gson.annotations.SerializedName
+
 data class News(
-  val title: String? = null,
-  val author: String? = null,
-  val createdAt: String? = null
+  @SerializedName("title") val title: String? = null,
+  @SerializedName("author") val author: String? = null,
+  @SerializedName("created_at") val createdAt: String? = null
 
 
 )

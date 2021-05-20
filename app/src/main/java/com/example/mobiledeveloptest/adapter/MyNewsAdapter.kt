@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobiledeveloptest.R
-import com.example.mobiledeveloptest.model.News
+import com.example.mobiledeveloptest.model.Hit
+
 import kotlinx.android.synthetic.main.item_noticias.view.*
 
-class MyNewsAdapter(private val context: Context, private val newsList: MutableList<News>): RecyclerView.Adapter<MyNewsAdapter.MyNewsHolder>() {
+class MyNewsAdapter(private val context: Context, private val newsList: MutableList<Hit>): RecyclerView.Adapter<MyNewsAdapter.MyNewsHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyNewsHolder{
         val itemView = LayoutInflater.from(context).inflate(R.layout.item_noticias, parent, false)
         return MyNewsHolder(itemView)
@@ -23,10 +24,10 @@ class MyNewsAdapter(private val context: Context, private val newsList: MutableL
 
     class MyNewsHolder(private val view: View):RecyclerView.ViewHolder(view) {
 
-        fun render(noticias: News) {
-            view.tvAuthorNoticia.text = noticias.author
-            view.tvCreated_at.text = noticias.createdAt
-            view.tvTitleNoticia.text = noticias.title
+        fun render(noticias: Hit) {
+            view.tvAuthorNoticia.text = noticias.author.toString()
+            //view.tvCreated_at.text = noticias.created_at.toString()
+            //view.tvTitleNoticia.text = noticias.title as CharSequence?
         }
 
     }
